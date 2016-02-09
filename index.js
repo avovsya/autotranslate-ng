@@ -4,12 +4,7 @@ var slugFn = require('slug');
 var _ = require('lodash');
 var path = require('path');
 
-var fileName = process.argv[2];
-console.log('File: ', fileName);
-
-fs.readFile(fileName, 'utf8', fileLoaded);
-
-function fileLoaded(err, data) {
+function fileLoaded(fileName, _, data) {
   data = prepareHtml(data);
   var $ = cheerio.load(data);
   var result = parse($);
@@ -154,3 +149,12 @@ function parse($) {
     json: result
   };
 }
+
+module.exports = {
+  run: function (fileName) {
+    console.log('File: ', fileName);
+
+    fs.readFile(fileName, 'utf8', fileLoaded.bind(null, fileName));
+
+  }
+};
