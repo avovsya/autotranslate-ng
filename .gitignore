@@ -1,0 +1,4 @@
+node_modules/*
+result.json
+result.html
+.tern-port
