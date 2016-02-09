@@ -1,11 +1,20 @@
 {
   "name": "autotranslate-ng",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Automatically replaces text in HTML to angular-translate attributes, and creates translation table",
   "main": "index.js",
   "author": "Artem Vovsia <avovsya@gmail.com>",
   "license": "ISC",
   "bin": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avovsya/autotranslate-ng"
+  },
+  "keywords": [ 
+    "angular",
+    "translate"
+  ],
+  "homepage": "https://github.com/avovsya/autotranslate-ng",
   "dependencies": {
     "cheerio": "^0.20.0",
     "lodash": "^4.3.0",
